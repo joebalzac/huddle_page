@@ -1,0 +1,92 @@
+.hero {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+  background-image: url("/images/bg-hero-desktop.svg");
+  background-color: $veryLightBlue;
+  z-index: 1;
+
+  @include breakpoint-down(small) {
+    background-image: url("/images/bg-hero-mobile.svg");
+    flex-direction: column;
+
+    position: relative;
+    transform: translateY(-15%);
+    background-position: bottom;
+  }
+
+  &__icon {
+    top: 0;
+    padding: 10rem;
+    transform: translateY(-5%);
+
+    img {
+      height: 30rem;
+      width: 42.5rem;
+      transform: translateY(5%);
+
+      @include breakpoint-down(small) {
+        height: 15.75rem;
+        width: 22.25rem;
+        transform: translateY(-35%);
+      }
+    }
+  }
+}
+
+.copy-section {
+  top: 0;
+  text-align: start;
+  padding-left: 5rem;
+
+  @include breakpoint-down(small) {
+    padding: 4.5rem 1rem;
+    text-align: center;
+    margin-top: 23rem;
+  }
+
+  .title {
+    font-size: 2.1875rem;
+    margin-bottom: 3.125rem;
+
+    @include breakpoint-down(small) {
+      font-size: 1.75rem;
+      font-weight: 525;
+    }
+
+    &__text {
+      font-size: 1.2rem;
+      margin-bottom: 2.125rem;
+
+      @include breakpoint-down(small) {
+        font-size: 1.2rem;
+        padding: 0rem 0.75rem;
+      }
+    }
+
+    &__cta {
+      background-color: $pink;
+      padding: 1.3125rem;
+      width: 17rem;
+      border-radius: 50px;
+      text-align: center;
+      color: white;
+
+      @include breakpoint-down(small) {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(4.2rem, 0rem);
+      }
+    }
+  }
+
+}
+
+

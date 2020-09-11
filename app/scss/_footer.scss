@@ -1,0 +1,132 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 20.625rem);
+  grid-template-rows: 1fr;
+
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $veryDarkCyan;
+  color: $white;
+  z-index: -2;
+
+  @include breakpoint-down(small) {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  &__logo {
+    padding: 12.18175rem 30rem 0rem 8.5rem;
+
+    @include breakpoint-down(small) {
+      padding: 1rem 2rem;
+      margin-top: 8rem;
+    }
+
+    img {
+      height: 2.25rem;
+    }
+  }
+
+  &__info {
+    margin: 17rem 0rem 2rem -12rem;
+
+    @include breakpoint-down(small) {
+      margin: 0rem 2rem;
+    }
+
+    .location,
+    .phone,
+    .email {
+      display: flex;
+      align-items: center;
+      padding: 0.8rem 0rem;
+      margin-right: 6rem;
+      font-size: 1rem;
+
+      @include breakpoint-down(small) {
+        justify-content: flex-start;
+        margin: none;
+        margin-right: 2rem;
+      }
+    }
+
+    p {
+      padding-left: 1.25rem;
+    }
+
+    img {
+      height: 1.2rem;
+    }
+  }
+
+  &__about {
+    margin: 16.5rem 0rem 2rem 1rem;
+    flex-direction: column;
+
+    @include breakpoint-down(small) {
+      margin: 2rem 0rem;
+      margin-bottom: 7rem;
+    }
+  }
+
+  &__list {
+    flex-direction: column;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 10rem);
+
+    @include breakpoint-down(small) {
+      display: flex;
+      padding-left: 1rem;
+    }
+
+    li {
+      list-style: none;
+      padding: 0.75rem 0rem;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: $white;
+        padding: 1rem;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+
+    align-items: center;
+
+    position: absolute;
+    transform: translate(70rem, 17rem);
+
+    @include breakpoint-down(small) {
+      margin: 4rem 0rem;
+      transform: translate(6.5rem, 45rem);
+    }
+
+    img {
+      height: 2rem;
+      margin: 1.2rem;
+    }
+  }
+
+  &__final {
+    margin-bottom: 2rem;
+    transform: translatex(70rem);
+
+    @include breakpoint-down(small) {
+      transform: translate(6rem, 0rem);
+      
+    }
+
+    p {
+      font-size: 0.75rem;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.45rem 5rem;
+  background: transparent;
+  z-index: 2;
+
+  @include breakpoint-down(small) {
+    padding: 2.125rem 1.25rem;
+    
+  }
+
+  .logo img {
+    height: 2.05rem;
+
+    @include breakpoint-down(small) {
+      height: 1.25rem;
+    }
+  }
+
+  .button {
+    padding: 0.8175rem 4rem;
+    
+    background-color: $white;
+    filter: drop-shadow(1px 1px 11px #bebcbc);
+    border-radius: 50px;
+
+    @include breakpoint-down(small) {
+      padding: .2rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 550;
+    }
+  }
+}
